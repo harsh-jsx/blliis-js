@@ -17,14 +17,8 @@ const Navbar = () => {
       gsap.to("#mobile-nav-menu", {
         duration: 1,
         height: 0,
-        paddingLeft: 0,
-        paddingTop: 0,
-        ease: "power4.inOut",
-        delay: 1,
-      });
-      gsap.to("#navbar", {
-        duration: 0.5,
-        backgroundColor: "transparent",
+        margin: 0,
+        ease: "power2.Out",
       });
       gsap.to("#mobile-nav-cta", {
         duration: 1,
@@ -36,45 +30,22 @@ const Navbar = () => {
     } else {
       setisNavOpen(true);
       gsap.to("#mobile-nav-menu", {
-        duration: 1,
-        height: "auto",
-        paddingLeft: "8px",
-        paddingTop: "16px",
-        ease: "power4.inOut",
-      });
-      gsap.to("#navbar", {
         duration: 0.5,
-        backgroundColor: "white",
+        height: "auto",
+        margin: "20px 0",
+        ease: "power2.Out",
       });
       gsap.to("#mobile-nav-cta", {
-        duration: 1,
+        duration: 0.5,
         height: "48px",
         marginTop: "56px",
         marginBottom: "32px",
-        ease: "power4.inOut",
-        delay: 1,
+        ease: "power2.Out",
       });
     }
   };
 
   useGSAP(() => {
-    gsap.set("#nav-menu a", {
-      color: "white",
-    });
-
-    gsap.set("#nav-cta p", {
-      color: "white",
-    });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#navbar-container",
-        start: "100% top",
-        end: "200% bottom",
-        scrub: true,
-      },
-    });
-
     gsap.from("#navbar-container", {
       y: -200,
       opacity: 0,
@@ -82,45 +53,6 @@ const Navbar = () => {
       duration: 1.5,
       delay: 1,
     });
-
-    tl.to(
-      "#navbar",
-      {
-        duration: 0.5,
-        ease: "power4.inOut",
-        backgroundColor: "white",
-        boxShadow: "0px 0px 30px 10px rgba(0, 0, 0, 0.1)",
-      },
-      "navbar"
-    );
-
-    tl.to(
-      "#nav-menu a",
-      {
-        duration: 0.5,
-        ease: "power4.inOut",
-        color: "black",
-      },
-      "navbar"
-    );
-
-    tl.to(
-      "#nav-cta p",
-      {
-        duration: 0.5,
-        ease: "power4.inOut",
-        color: "black",
-      },
-      "navbar"
-    );
-
-    tl.to(
-      "#nav-logo",
-      {
-        filter: "invert(0)",
-      },
-      "navbar"
-    );
   });
 
   return (
@@ -129,7 +61,7 @@ const Navbar = () => {
       id="navbar-container"
     >
       <div
-        className=" transition-all ease duration-1000 flex max-md:flex-col justify-between items-center max-w-[1700px] w-full bg-transparent max-md:bg-white px-4 rounded-[50px] overflow-hidden"
+        className=" transition-all ease duration-1000 bg-white flex max-md:flex-col justify-between items-center max-w-[1700px] w-full bg-transparent max-md:bg-white px-4 rounded-[50px] overflow-hidden"
         id="navbar"
       >
         <button className="cursor-pointer button max-md:hidden" id="nav-cta">
@@ -141,9 +73,6 @@ const Navbar = () => {
             src={Logo}
             alt="logo"
             className="w-18 object-cover"
-            style={{
-              filter: "invert(1)",
-            }}
             id="nav-logo"
           />
         </a>
@@ -165,7 +94,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className="hidden max-md:flex w-full flex-col gap-2 pt-0 pl-0 overflow-hidden h-0"
+          className="hidden max-md:flex w-full flex-col gap-2 pt-0 pl-2 pb-0 overflow-hidden h-0"
           id="mobile-nav-menu"
         >
           <Link to="/services" className="text-2xl">
