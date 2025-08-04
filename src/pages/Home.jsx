@@ -4,6 +4,8 @@ import Brief from "../components/Brief";
 import LocationAndReviews from "../components/LocationAndReviews";
 import CelebritySlider from "../components/CelebritySlider";
 import { CardCarousel } from "../components/swiper";
+import HomeArtists from "../components/HomeArtists";
+import HomeCollaborations from "../components/HomeCollaborations";
 
 const images = [
   {
@@ -47,6 +49,14 @@ const Home = () => {
         showPagination={true}
         showNavigation={true}
       />
+      <h1 className="text-center my-12 font-bold text-5xl">
+        Artists worked with us
+      </h1>
+      <HomeArtists />
+      <h1 className="text-center my-12 font-bold text-5xl">
+        Brand Collaborations
+      </h1>
+      <HomeCollaborations />
     </div>
   );
 };

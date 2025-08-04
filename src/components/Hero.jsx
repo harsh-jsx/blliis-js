@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../assets/hero.mp4";
+import IMG_9072 from "../assets/IMG_9072.mov";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -66,7 +66,7 @@ const Hero = () => {
       </div>
       <div className="absolute z-[1] top-0 left-0 w-full h-full bg-black">
         <video
-          src={hero}
+          src={IMG_9072}
           muted
           autoPlay
           loop
