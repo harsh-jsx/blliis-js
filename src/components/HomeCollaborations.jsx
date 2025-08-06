@@ -11,6 +11,36 @@ const CollabsLogo = [
   "https://logos-world.net/wp-content/uploads/2020/12/Kerastase-Logo.png",
   "https://upload.wikimedia.org/wikipedia/commons/5/53/Logo_for_Atlanta_Fashion_Week.png",
   "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gucci_logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/09/Lakme-Logo-2011-2019.png",
+  "https://logos-world.net/wp-content/uploads/2020/11/Pantene-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/04/LOreal-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/12/Kerastase-Logo.png",
+  "https://upload.wikimedia.org/wikipedia/commons/5/53/Logo_for_Atlanta_Fashion_Week.png",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gucci_logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/09/Lakme-Logo-2011-2019.png",
+  "https://logos-world.net/wp-content/uploads/2020/11/Pantene-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/04/LOreal-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/12/Kerastase-Logo.png",
+  "https://upload.wikimedia.org/wikipedia/commons/5/53/Logo_for_Atlanta_Fashion_Week.png",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gucci_logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/09/Lakme-Logo-2011-2019.png",
+  "https://logos-world.net/wp-content/uploads/2020/11/Pantene-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/04/LOreal-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/12/Kerastase-Logo.png",
+  "https://upload.wikimedia.org/wikipedia/commons/5/53/Logo_for_Atlanta_Fashion_Week.png",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gucci_logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/09/Lakme-Logo-2011-2019.png",
+  "https://logos-world.net/wp-content/uploads/2020/11/Pantene-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/04/LOreal-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/12/Kerastase-Logo.png",
+  "https://upload.wikimedia.org/wikipedia/commons/5/53/Logo_for_Atlanta_Fashion_Week.png",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gucci_logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/09/Lakme-Logo-2011-2019.png",
+  "https://logos-world.net/wp-content/uploads/2020/11/Pantene-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/04/LOreal-Logo.png",
+  "https://logos-world.net/wp-content/uploads/2020/12/Kerastase-Logo.png",
+  "https://upload.wikimedia.org/wikipedia/commons/5/53/Logo_for_Atlanta_Fashion_Week.png",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gucci_logo.png",
 ];
 
 const HomeCollaborations = () => {
@@ -32,9 +62,9 @@ const HomeCollaborations = () => {
   });
 
   return (
-    <div className="flex justify-center items-center w-full py-8 flex-col mt-8">
+    <div className="flex justify-center items-center w-full py-2 flex-col mt-8 overflow-hidden">
       <div
-        className="flex justify-between flex-wrap items-center w-[90%] h-full max-md:gap-8"
+        className="flex items-center w-[90%] h-full gap-16 max-md:gap-8 animate-scroll "
         id="home-collabs-container"
       >
         {CollabsLogo.map((logo, index) => (

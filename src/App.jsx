@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import Footer from "./components/Footer";
 
 const App = () => {
   const lenis = new Lenis();
@@ -23,6 +24,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

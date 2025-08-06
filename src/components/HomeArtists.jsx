@@ -4,6 +4,7 @@ import artistTwo from "../assets/artistTwo.mp4";
 import artistThree from "../assets/artistThree.mp4";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import useEmblaCarousel from "embla-carousel-react";
 
 gsap.registerPlugin(useGSAP);
 
@@ -23,6 +24,8 @@ const Artists = [
 ];
 
 const HomeArtists = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
   useGSAP(() => {
     gsap.from("#home-artist-container div", {
       scrollTrigger: {
@@ -49,7 +52,8 @@ const HomeArtists = () => {
         {Artists.map((artist, index) => (
           <div
             key={index}
-            className="w-full max-w-[500px] overflow-hidden flex flex-col gap-2"
+            className="w-full max-w-[500px] overflow-hidden flex flex-col gap-4 p-4 "
+            style={{ boxShadow: "0px 0px 100px rgba(0, 0, 0, 0.1)" }}
           >
             <video
               src={artist.url}
@@ -57,9 +61,9 @@ const HomeArtists = () => {
               autoPlay
               loop
               playsInline
-              className="h-full w-full object-cover"
+              className="h-[400px] w-full object-cover"
             ></video>
-            <p className="text-lg">{artist.text}</p>
+            <p className="text-lg max-sm:text-sm">{artist.text}</p>
           </div>
         ))}
       </div>

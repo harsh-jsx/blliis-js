@@ -6,6 +6,7 @@ import CelebritySlider from "../components/CelebritySlider";
 import { CardCarousel } from "../components/swiper";
 import HomeArtists from "../components/HomeArtists";
 import HomeCollaborations from "../components/HomeCollaborations";
+import Testimonials from "../components/Testimonials";
 
 const images = [
   {
@@ -57,6 +58,7 @@ const Home = () => {
         Brand Collaborations
       </h1>
       <HomeCollaborations />
+      <Testimonials />
     </div>
   );
 };
