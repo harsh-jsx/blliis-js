@@ -58,7 +58,7 @@ const Hero = () => {
           LIKE NEVER BEFORE
         </p>
         <button
-          className="cursor-pointer mt-4 bg-white p-4 px-8 max-sm:p-3"
+          className="cursor-pointer mt-42 bg-white p-4 px-8 max-sm:p-3"
           id="hero-button"
         >
           Get Appointment

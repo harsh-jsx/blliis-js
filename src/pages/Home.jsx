@@ -7,31 +7,40 @@ import { CardCarousel } from "../components/swiper";
 import HomeArtists from "../components/HomeArtists";
 import HomeCollaborations from "../components/HomeCollaborations";
 import Testimonials from "../components/Testimonials";
+import trustedone from "../assets/trustedone.mp4";
+import trustedtwo from "../assets/trustedtwo.mp4";
+import trustedthree from "../assets/trustedthree.mp4";
 
 const images = [
   {
+    src: trustedone,
+    alt: "Image 1",
+    type: "vid",
+  },
+  {
+    src: trustedtwo,
+    alt: "Image 2",
+    type: "vid",
+  },
+  {
+    src: trustedthree,
+    alt: "Image 3",
+    type: "vid",
+  },
+  {
     src: "https://skiper-ui.com/_next/image?url=%2Fcard%2F1.png&w=256&q=75",
     alt: "Image 1",
+    type: "image",
   },
   {
     src: "https://skiper-ui.com/_next/image?url=%2Fcard%2F3.png&w=256&q=75",
     alt: "Image 2",
+    type: "image",
   },
   {
     src: "https://skiper-ui.com/_next/image?url=%2Fcard%2F2.png&w=256&q=75",
     alt: "Image 3",
-  },
-  {
-    src: "https://skiper-ui.com/_next/image?url=%2Fcard%2F1.png&w=256&q=75",
-    alt: "Image 1",
-  },
-  {
-    src: "https://skiper-ui.com/_next/image?url=%2Fcard%2F3.png&w=256&q=75",
-    alt: "Image 2",
-  },
-  {
-    src: "https://skiper-ui.com/_next/image?url=%2Fcard%2F2.png&w=256&q=75",
-    alt: "Image 3",
+    type: "image",
   },
 ];
 

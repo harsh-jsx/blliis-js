@@ -16,7 +16,7 @@ import {
 } from "swiper/modules";
 
 interface CarouselProps {
-  images: { src: string; alt: string }[];
+  images: { src: string; alt: string; type: string }[];
   autoplayDelay?: number;
   showPagination?: boolean;
   showNavigation?: boolean;
@@ -92,27 +92,51 @@ export const CardCarousel: React.FC<CarouselProps> = ({
               >
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
-                    <div className="size-full rounded-3xl">
-                      <img
-                        src={image.src}
-                        width={500}
-                        height={500}
-                        className="size-full rounded-xl"
-                        alt={image.alt}
-                      />
+                    <div className="size-full rounded-3xl ">
+                      {image.type === "vid" ? (
+                        <video
+                          src={image.src}
+                          width={500}
+                          height={500}
+                          className="size-full rounded-xl object-cover"
+                          muted
+                          autoPlay
+                          loop
+                        ></video>
+                      ) : (
+                        <img
+                          src={image.src}
+                          width={500}
+                          height={500}
+                          className="size-full rounded-xl"
+                          alt={image.alt}
+                        />
+                      )}
                     </div>
                   </SwiperSlide>
                 ))}
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
                     <div className="size-full rounded-3xl">
-                      <img
-                        src={image.src}
-                        width={200}
-                        height={200}
-                        className="size-full rounded-xl"
-                        alt={image.alt}
-                      />
+                      {image.type === "vid" ? (
+                        <video
+                          src={image.src}
+                          width={500}
+                          height={500}
+                          className="size-full rounded-xl object-cover"
+                          muted
+                          autoPlay
+                          loop
+                        ></video>
+                      ) : (
+                        <img
+                          src={image.src}
+                          width={500}
+                          height={500}
+                          className="size-full rounded-xl"
+                          alt={image.alt}
+                        />
+                      )}
                     </div>
                   </SwiperSlide>
                 ))}
