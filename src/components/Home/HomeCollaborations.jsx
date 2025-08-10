@@ -62,9 +62,35 @@ const HomeCollaborations = () => {
   });
 
   return (
-    <div className="flex justify-center items-center w-full py-2 flex-col mt-8 overflow-hidden">
+    <div className="flex justify-center items-center w-full flex-col mt-8 overflow-hidden">
       <div
-        className="flex items-center w-[90%] h-full gap-16 max-md:gap-8 animate-scroll "
+        className="flex items-center w-[90%] h-24 max-sm:h-16 gap-16 max-md:gap-8 animate-scroll "
+        id="home-collabs-container"
+      >
+        {CollabsLogo.map((logo, index) => (
+          <img
+            key={index}
+            src={logo}
+            alt="brand"
+            className="w-42 max-md:w-32 max-sm:w-18 aspect-square object-contain"
+          />
+        ))}
+      </div>
+      <div
+        className="flex items-center w-[90%] h-24 max-sm:h-16 gap-16 max-md:gap-8 animate-scroll-two"
+        id="home-collabs-container"
+      >
+        {CollabsLogo.map((logo, index) => (
+          <img
+            key={index}
+            src={logo}
+            alt="brand"
+            className="w-42 max-md:w-32 max-sm:w-18 aspect-square object-contain"
+          />
+        ))}
+      </div>
+      <div
+        className="flex items-center w-[90%] h-24 max-sm:h-16 gap-16 max-md:gap-8 animate-scroll "
         id="home-collabs-container"
       >
         {CollabsLogo.map((logo, index) => (

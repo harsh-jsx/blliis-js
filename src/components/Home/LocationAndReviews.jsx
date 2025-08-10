@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Map from "../assets/Map.jpg";
+import Map from "../../assets/Map.jpg";
 import { FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -89,7 +89,7 @@ const LocationAndReviews = () => {
 
   return (
     <div
-      className="flex justify-center items-center w-full py-8 flex-col mt-8"
+      className="flex justify-center items-center w-full py-8 flex-col mt-8 bg-black text-white"
       id="location-and-review-container"
     >
       <div className="flex justify-between items-center w-[90%] h-full max-md:flex-col max-md:gap-8">

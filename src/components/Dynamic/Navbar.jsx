@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import Logo from "../assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaX } from "react-icons/fa6";
+import { FaBars } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
@@ -57,18 +59,19 @@ const Navbar = () => {
 
   return (
     <div
-      className="w-full flex justify-center items-center py-6 fixed top-0 px-4 z-[1000000]"
+      className="w-full flex justify-center items-center py-6 max-sm:py-2 fixed top-0 px-4 z-[1000000]"
       id="navbar-container"
     >
       <div
-        className=" transition-all ease duration-1000 bg-white flex max-md:flex-col justify-between items-center max-w-[1700px] w-full bg-transparent max-md:bg-white px-4 rounded-[50px] overflow-hidden"
+        className=" transition-all ease duration-1000 bg-white flex max-md:flex-col justify-between items-center max-w-[1700px] w-full px-4 rounded-[50px] overflow-hidden"
         id="navbar"
+        style={{ boxShadow: "0px 0px 100px rgba(0, 0, 0, 0.2)" }}
       >
         <button className="cursor-pointer button max-md:hidden" id="nav-cta">
           <p>Book now</p>
         </button>
 
-        <a href="/" className="mr-[-60px] max-md:hidden">
+        <a href="/" className="mr-[-180px] max-md:hidden">
           <img
             src={Logo}
             alt="logo"
@@ -82,6 +85,7 @@ const Navbar = () => {
           <Link to="/blog">Blog</Link>
           <Link to="/media">Media</Link>
           <Link to="/about">About Us</Link>
+          <Link to="/contact">Contact</Link>
         </div>
 
         <div className="justify-between hidden max-md:flex w-full items-center">
@@ -89,7 +93,7 @@ const Navbar = () => {
             <img src={Logo} alt="logo" className="w-18 object-cover" />
           </a>
           <p className="text-xl" onClick={ToggleNavbar}>
-            {isNavOpen ? "Close" : "Menu"}
+            {isNavOpen ? <FaX /> : <FaBars />}
           </p>
         </div>
 
@@ -108,6 +112,9 @@ const Navbar = () => {
           </Link>
           <Link to="/about" className="text-2xl">
             About Us
+          </Link>
+          <Link to="/contact" className="text-2xl">
+            Contact
           </Link>
         </div>
 

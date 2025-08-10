@@ -1,5 +1,5 @@
 import React from "react";
-import IMG_9072 from "../assets/IMG_9072.mov";
+import IMG_9072 from "../../assets/IMG_9072.mov";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -70,6 +70,7 @@ const Hero = () => {
           muted
           autoPlay
           loop
+          controls={false}
           className="w-full h-full object-cover opacity-40 z-[-10]"
         ></video>
       </div>

@@ -96,8 +96,6 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                       {image.type === "vid" ? (
                         <video
                           src={image.src}
-                          width={500}
-                          height={500}
                           className="size-full rounded-xl object-cover"
                           muted
                           autoPlay
@@ -106,9 +104,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                       ) : (
                         <img
                           src={image.src}
-                          width={500}
-                          height={500}
-                          className="size-full rounded-xl"
+                          className="w-full h-[600px] rounded-xl object-cover"
                           alt={image.alt}
                         />
                       )}
@@ -121,8 +117,6 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                       {image.type === "vid" ? (
                         <video
                           src={image.src}
-                          width={500}
-                          height={500}
                           className="size-full rounded-xl object-cover"
                           muted
                           autoPlay
@@ -131,9 +125,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                       ) : (
                         <img
                           src={image.src}
-                          width={500}
-                          height={500}
-                          className="size-full rounded-xl"
+                          className="w-full h-[600px] rounded-xl object-cover"
                           alt={image.alt}
                         />
                       )}
